@@ -1,0 +1,24 @@
+﻿
+外设GPIO的PIN_CNF[n]  寄存器 ，设置IO口的驱动能力     // n=0..31 
+
+S  -- 标准驱动
+H -- 强驱动
+D -- 断开连接
+
+DRIVE Drive configuration
+
+S0S1  0    //Standard '0', standard '1'         //低电平为标准驱动，高电平为标准驱动
+
+H0S1  1    //High drive '0', standard '1'      //低电平为强驱动，高电平为标准驱动
+
+S0H1  2    //Standard '0', high drive '1'
+
+H0H1  3    //High drive '0', high 'drive '1''
+
+D0S1  4    //Disconnect '0' standard '1' (normally used for wired-or connections)
+
+D0H1  5    //Disconnect '0', high drive '1' (normally used for wired-or connections)
+
+S0D1  6    //Standard '0'. disconnect '1' (normally used for wired-and connections)
+
+H0D1  7    //High drive '0', disconnect '1' (normally used for wired-and connections)
